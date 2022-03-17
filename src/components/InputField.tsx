@@ -17,24 +17,22 @@ interface Results {
 const InputField = ({searchValue, setSearchValue} : Props) => {
 
     //quicksort function
-    const quicksort = (list: Results[]):Results[] => {
-        if (list.length < 2) {
-            return list
-        }
+    const quickSortProductNames = (productNames: Results[]):Results[] => {
+        if (productNames == null) return []
+        if (productNames.length < 2) return productNames
+
+        let pivot: Results = productNames[0], left: Results[] = [], right: Results[] = []      
     
-        let pivot: Results = list[0]
-        let left: Results[] = []
-        let right: Results[] = []
-    
-        for (let i: number = 1; i < list.length; i ++) {
-            if (list[i].productName < pivot.productName) {
-                left.push(list[i])
-            } else {
-                right.push(list[i])
+        for (let i: number = 1; i < productNames.length; i ++) {
+            if (productNames[i].productName < pivot.productName) {
+                left.push(productNames[i])
+                continue
             }
+    
+            right.push(productNames[i])
         }
     
-        return [...quicksort(left), pivot, ...quicksort(right)]
+        return [...quickSortProductNames(left), pivot, ...quickSortProductNames(right)]
     }
     
     
@@ -50,7 +48,7 @@ const InputField = ({searchValue, setSearchValue} : Props) => {
             }
         })
         .then(res => res.json())
-        .then(data => setResults(quicksort(data)))
+        .then(data => setResults(quickSortProductNames(data)))
     }
 
     return (
