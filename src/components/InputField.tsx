@@ -43,7 +43,7 @@ const InputField = ({searchValue, setSearchValue} : Props) => {
 
     const onSubmit = (e: React.FormEvent): void => {
         e.preventDefault()
-        fetch(`http://ec2-3-129-24-59.us-east-2.compute.amazonaws.com:4000/api/products`, {
+        fetch(`http://mym6-alb-2138763550.us-east-2.elb.amazonaws.com/api/products`, {
             method: 'GET',
             headers: {
                 'Content-type': 'Application/json',
