@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import InputField from './components/InputField';
 import './styles.css'
+import './sass/index.scss'
 
 
 
