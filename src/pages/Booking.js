@@ -8,7 +8,7 @@ const Booking = () => {
     return (
         <>
             <h3>Booking page</h3>
-            <button>Book to view</button>
+            {/* <button>Book to view</button> */}
         </>
     )
 }
