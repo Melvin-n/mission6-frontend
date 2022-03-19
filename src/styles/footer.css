@@ -1,0 +1,126 @@
+#footer-container {
+    width: 100%;
+    height: 80vh;
+}
+
+#footer-hero {
+    background-image: url('../../public/images/Search/wavy-merged.png');
+    width: 100%;
+    height: 90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+#signup-box {
+    margin-top: 2rem;
+    width: 30%;
+    height: 85%;
+    box-shadow: 3px 3px 3px 3px rgb(197, 196, 196);
+    background-color: white;
+    padding: 1.5rem;
+    letter-spacing: 0.2px
+}
+
+#signup-box h3 {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#signup-box-info {
+    font-size: 0.8rem;
+}
+
+#signup-box span h4 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+#signup-box span p {
+    margin: 0;
+    margin-bottom: 0.4rem;
+    color: #C3CBCD;
+}
+
+#signup-box span {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: start;
+    gap: 0.5rem;
+    margin-bottom: 0;
+}
+
+#for-only-text {
+    margin: 0;
+    font-size: 1rem;
+}
+
+#signup-box-features {
+    list-style-image: url('../../public/images/Search/icon/outlined/suggested/circle/check.png');
+    margin: 0;
+    padding-left: 1.5rem
+}
+
+#footer-hero-contact-details-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.8rem;
+}
+
+#footer-hero-contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 3rem;
+}
+
+.footer-hero-contact-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+}
+
+.footer-hero-contact-item-text {
+    margin: 0;
+}
+
+.footer-hero-contact-item-icon {
+    width: 1rem;
+    height: 1rem;
+    padding-right: 0.5rem;
+}
+
+#signup-box-features h4 {
+    margin: 0 1rem 0 0;
+}
+
+#signup-footer-button {
+    width: 100%;
+    background-color: var(--main-red);
+    color: white;
+    outline: none;
+    border: none;
+    min-height: 2.5rem;
+    margin-top: 1rem;
+}
+
+#signup-box-features-text {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#footer-hero-image {
+    width: 8rem;
+    height: 15rem;
+    margin-bottom: 1.4rem;
+}

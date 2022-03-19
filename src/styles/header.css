@@ -1,0 +1,98 @@
+:root {
+    --main-red: #BF163D;
+    --active-red: #900F2D;
+}
+
+body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish', sans-serif;
+}
+
+#header-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 20%;
+    margin: 0;
+    border-bottom: 0.1rem solid #BF163D ;
+    padding-top: 1rem;
+}
+
+#header-navbar-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: flex-end;
+    margin: 0;
+    gap: 0.3rem;
+    width: 65%;
+    padding-bottom: 0;
+
+}
+
+.header-navbar-list-item {
+    width: 19%;
+    background-color: var(--main-red);
+    color: white;
+    margin-bottom: 0;
+    font-size: 0.6rem;
+    min-height: 2.4rem;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#logo-left {
+    width: 9.5rem;
+    height: 3.6rem;
+    padding: 1rem;
+}
+
+#right-header-content {
+    margin-left: 1rem;
+    padding: 0;
+    padding-right: 0.3rem;
+    width: 13%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#header-user-info {
+    display: flex;
+    padding: 0.6rem 0;
+    gap: 0.6rem;
+    align-self: flex-end;
+    margin: 0;
+}
+
+#header-user-info p {
+   font-size: 0.9rem; 
+}
+
+#header-user-info img {
+    width: 3rem;
+    height: 3rem;
+    
+}
+
+#contact-nav-item {
+    border-left: 0.1rem solid var(--main-red);
+    border-top: 0.1rem solid var(--main-red);
+    border-right: 0.1rem solid var(--main-red);
+    border-bottom: none;
+    padding-top: 0.1rem;
+    height: 2.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-red);
+    font-size: 0.8rem;
+    width: 100%;
+}
+

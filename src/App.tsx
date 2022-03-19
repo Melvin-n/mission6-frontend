@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import InputField from './components/InputField';
-import './styles.css'
+import './styles/styles.css'
+import SearchPage from './pages/SearchPage';
 
 
 
@@ -12,8 +13,7 @@ const App: React.FC = () => {
 
   return (
     <div className='App'>
-      <span>Quick sort</span>
-      <InputField  searchValue={searchValue} setSearchValue={setSearchValue} />
+      <SearchPage />
     </div>
   );
 }

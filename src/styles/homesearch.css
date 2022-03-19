@@ -1,0 +1,11 @@
+body {
+    width: 100%;
+}
+
+#form-section-container {
+    background-image: url('../../public/images/Search/Artwork.png');
+    background-size: contain;
+    background-repeat: repeat;
+    width: 100%;
+    min-height: 90vh;
+}
