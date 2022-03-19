@@ -3,6 +3,8 @@ import './App.css';
 import InputField from './components/InputField';
 import './styles.css'
 
+import Booking from './pages/Booking';
+
 
 
 const App: React.FC = () => {
@@ -14,6 +16,7 @@ const App: React.FC = () => {
     <div className='App'>
       <span>Quick sort</span>
       <InputField  searchValue={searchValue} setSearchValue={setSearchValue} />
+      <Booking />
     </div>
   );
 }
