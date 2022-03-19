@@ -5,6 +5,7 @@ import InputField from './components/InputField';
 import './styles.css'
 
 import Booking from './pages/Booking.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
