@@ -49,6 +49,13 @@ const Footer: React.FC = () => {
                 </ul>
             </div>
         </div>
+        <div id='footer-bottom'>
+            <ul id='footer-bottom-list'>
+                <li className='footer-bottom-item'>Privacy policy</li>
+                <li className='footer-bottom-item'>Terms of service</li>
+                <li className='footer-bottom-item'>Legal</li>
+            </ul>
+        </div>
     </div>
   )
 }
