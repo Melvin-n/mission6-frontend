@@ -37,6 +37,7 @@
 
 #signup-box-info {
     font-size: 0.8rem;
+    text-align: start;
 }
 
 #signup-box span h4 {
@@ -63,6 +64,8 @@
 #for-only-text {
     margin: 0;
     font-size: 1rem;
+    text-align: start;
+
 }
 
 #signup-box-features {
