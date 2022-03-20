@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 import "./Booking.css";
-// import Button from 'react-bootstrap/Button';
 
 // or less ideally
 import {
@@ -156,6 +155,15 @@ const Booking = () => {
               </Container>
             </Col>
           </Row>
+          <Row>
+           <Col className="text-center">
+          <Link to="/booking">
+        <Button variant="danger">
+          Book a viewing
+        </Button>
+        </Link>
+        </Col>
+        </Row>
         </Container>
       </Container>
     </>

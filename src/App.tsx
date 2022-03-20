@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
 import InputField from './components/InputField';
 import './styles.css'
@@ -23,9 +23,6 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/booking" element={<Booking />} />
         </Routes>
-        {/* <button>
-          <Link to="/booking">Book a viewing</Link>
-        </button> */}
       </BrowserRouter>
     </div>
   );
