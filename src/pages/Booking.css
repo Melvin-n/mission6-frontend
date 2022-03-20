@@ -11,3 +11,12 @@ p {
 .card-title {
  color: #BF163D;
 }
+
+.checkbox-margin {
+  margin-right: 10px;
+}
+
+/* .checkbox-color {
+  color: #BF163D;
+  border: #BF163D;  
+} */
