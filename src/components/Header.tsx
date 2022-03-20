@@ -6,11 +6,11 @@ const Header = () => {
     <div id='header-container'>
         <img id='logo-left' src='./images/Search/Auckland-Property-Management-Web-Logo.png' alt='logo' />
         <ul id='header-navbar-list'>
-            <li className='header-navbar-list-item'>Property Rental</li>
-            <li className='header-navbar-list-item'>Property Management</li>
-            <li className='header-navbar-list-item'>Body Corporate</li>
-            <li className='header-navbar-list-item'>Commercial</li>
-            <li className='header-navbar-list-item'>Resources</li>
+            <li id='nav-property-rental' className='header-navbar-list-item'>Property Rental</li>
+            <li id='nav-property-mgmt' className='header-navbar-list-item'>Property Management</li>
+            <li id='nav-corporate' className='header-navbar-list-item'>Body Corporate</li>
+            <li id='nav-commercial' className='header-navbar-list-item'>Commercial</li>
+            <li id='nav-resources' className='header-navbar-list-item'>Resources</li>
         </ul>
         <div id='right-header-content'>
             <div id='header-user-info'>
