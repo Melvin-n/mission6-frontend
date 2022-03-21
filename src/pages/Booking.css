@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap');
+
+/* CSS rules to specify families:
+font-family: 'Mulish', sans-serif; */
+
+p {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 200;
+}
+
+.card-title {
+ color: #BF163D;
+}
+
+.checkbox-margin {
+  margin-right: 10px;
+}
+
+.booking-button {
+ background-color: #BF163D;
+ color: white
+}
+
+/* .checkbox-color {
+  color: #BF163D;
+  border: #BF163D;  
+} */
