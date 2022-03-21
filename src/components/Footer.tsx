@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
                         src='./images/Search/icon/outlined/other/mail/mail.png'
                         alt='mail-icon'
                         />
-                        <p className='footer-hero-contact-item-text'>example@website.com</p>
+                        <p className='footer-hero-contact-item-text'>info@aucklandprop.co.nz</p>
                     </li>
                     <li className='footer-hero-contact-item'>
                         <img 
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
                         src='./images/Search/icon/outlined/other/phone/phone.png'
                         alt='phone-icon'
                         />
-                        <p className='footer-hero-contact-item-text'>(406) 555-0120</p>
+                        <p className='footer-hero-contact-item-text'>(09) 262 0561</p>
                     </li>
                     <li className='footer-hero-contact-item'>
                         <img 
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
                         src='./images/Search/icon/outlined/other/location/map pin.png'
                         alt='location-icon'
                         />
-                        <p className='footer-hero-contact-item-text'>8502 Preston Rd. Inglewood, Maine 98380</p>
+                        <p className='footer-hero-contact-item-text'>1/63 Corinthian Drive, Albany, Auckland 0632</p>
                     </li>
                 </ul>
             </div>
