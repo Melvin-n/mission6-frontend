@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
 import InputField from './components/InputField';
-import './styles.css'
+import './styles/styles.css'
+import SearchPage from './pages/SearchPage';
 
 import Booking from './pages/Booking.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -21,9 +22,11 @@ const App: React.FC = () => {
 
       <BrowserRouter>
         <Routes>
+          <Route path='/' element={<SearchPage />} />
           <Route path="/booking" element={<Booking />} />
         </Routes>
       </BrowserRouter>
+
     </div>
   );
 }
