@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap');
+
 :root {
     --main-grey: #6C7476;
     --light-grey: #F4F5F4;
@@ -20,10 +22,10 @@ body {
 }
 
 #main-search-form {
-    width: 40rem;
+    width: 42rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 1.2rem;
+    padding: 2rem;
     background-color: white;
     box-shadow: 1px 1px 10px 5px rgb(197, 196, 196);
     
@@ -32,7 +34,11 @@ body {
 #form-header {
     grid-column-start: 1;
     grid-column-end: 3;
-
+    font-size: 1.5rem;
+    color:#BF163D;
+    font-weight: 600;
+    font-family: 'Mulish', sans-serif;
+    padding-bottom: 1rem;
 }
 
 #form-top-left {
@@ -42,6 +48,7 @@ body {
     padding-bottom: 1.5rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    margin-top: 0.25rem;
 
 }
 
@@ -53,6 +60,7 @@ body {
     padding-left: 3rem;
     padding-right: 1.5rem;
     padding-bottom: 1.5rem;
+    margin: 0;
 }
 
 #bedrooms-form-section {
@@ -89,15 +97,6 @@ body {
     align-items: center;
 }
 
-h2 {
-    margin: 0 0.25rem 1.5rem 0.25rem;
-    color: #BF163D;
-}
-
-h5 {
-    color: var(--main-grey);
-    margin: 0.5rem;
-}
 
 #form-suburb {
     outline: none;
@@ -106,6 +105,8 @@ h5 {
     height: 2rem;
     width: 15rem;
     font-size: 1rem;
+    margin: 0;
+    padding: 0;
 }
 
 select {
@@ -115,7 +116,10 @@ select {
     width: 6.5rem;
     height: 2rem;
     color: #6C7476;
+    font-size: 1rem;
+    margin-top: 0;
 }
+
 
 #bathroom-pets-form-section {
     display: grid;
@@ -123,33 +127,48 @@ select {
 }
 
 
-p {
+.form-item-title {
     margin: 0;
     padding: 0;
     color: #6C7476;
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: center;
-    
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    text-align: start;
+    padding: 0.6rem 0;
+    padding-bottom: 0.4rem;
+    height: 2.2rem;
+}
+
+input {
+    border: 2px solid black;
 }
 
 input[type='checkbox'] {
     height: 1.2rem;
     width: 1.2rem;
     cursor: pointer;
+    padding: 1rem;
 }
 
 input[type='checkbox']:checked {
     accent-color: #BF163D;
+    
 }
 
 .distance-number {
     background-color: var(--light-grey);
-    height: 2rem;
+    height: 1.8rem;
     min-width: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1rem;
 }
 
 .radius-text {
@@ -160,7 +179,12 @@ input[type='checkbox']:checked {
     font-size: 0.9rem;
     margin:0;
     padding: 0;
-    font-weight: bold;
+    font-weight: 400;
+}
+
+.form-slider-container {
+    gap: 0.4rem;
+    padding: 0.1rem;
 }
 
 .form-slider-container h5 {
@@ -210,10 +234,6 @@ input[type='checkbox']:checked {
     justify-content: space-between;
 }
 
-h5 {
-    padding: 0;
-    margin-left: 0;
-}
 
 #form-search-button {
     background-color: #BF163D;

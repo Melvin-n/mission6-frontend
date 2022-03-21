@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from "react-router-dom";
 import BookingTime from '../components/BookingTime.js';
 
 import "./Booking.css";
+
 
 // or less ideally
 import {
