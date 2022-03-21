@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import BookingTime from '../components/BookingTime.js';
+
 import "./Booking.css";
 
 // or less ideally
@@ -18,26 +20,27 @@ import {
 } from "react-bootstrap";
 
 // import background from '../../public/images/Book-Viewing/Cool Kids Staying Home-1.png';
-        //   style={{
-        //       backgroundImage: "url(http://localhost:3000/images/Book-Viewing/box/Cool Kids Staying Home-1.png)",
-        //     //   backgroundSize: "cover",
-        //     //   backgroundRepeat:"no-repeat"
-        //       backgroundRepeat:"repeat"
-        //       }}
-
+//   style={{
+//       backgroundImage: "url(http://localhost:3000/images/Book-Viewing/box/Cool Kids Staying Home-1.png)",
+//     //   backgroundSize: "cover",
+//     //   backgroundRepeat:"no-repeat"
+//       backgroundRepeat:"repeat"
+//       }}
 
 const Booking = () => {
   const [bookValue, setBookValue] = useState("");
 
   return (
     <>
-      <Container className="container-main"
+      <Container
+        className="container-main"
         style={{
-            backgroundImage: "url(http://localhost:3000/images/Book-Viewing/box/Cool Kids Staying Home-1.png)"
+          backgroundImage:
+            "url(http://localhost:3000/images/Book-Viewing/box/Cool Kids Staying Home-1.png)",
         }}
       >
-        <Container className="container-2nd mx-5" >
-        {/* <Container> */}
+        <Container className="container-2nd mx-5">
+          {/* <Container> */}
           <Row>
             <Col sm={5}>
               <Card className="mt-2">
@@ -72,7 +75,9 @@ const Booking = () => {
                   <Col sm={6}>
                     <Row>
                       <Col sm={4} className="px-1">
-                        <DropdownButton
+
+                       <BookingTime />
+                        {/* <DropdownButton
                           id="dropdown-basic-button"
                           variant="light"
                           title="Morning"
@@ -98,7 +103,7 @@ const Booking = () => {
                           title="Evening"
                         >
                           <Dropdown.Item href="#/action-1">5:00</Dropdown.Item>
-                        </DropdownButton>
+                        </DropdownButton> */}
                       </Col>
                     </Row>
                   </Col>
@@ -140,7 +145,7 @@ const Booking = () => {
                     <Col className="my-2">
                       <p>Agree to Covid-19 regulation</p>
                       <form>
-                        <label className="checkbox-margin">Read regulation</label>
+                        <label className="checkbox-margin my-2">Read regulation</label>
                         <input type="checkbox" className="checkbox-color"/>
                       </form>
                     </Col>
@@ -156,14 +161,14 @@ const Booking = () => {
             </Col>
           </Row>
           <Row>
-           <Col className="text-center">
-          <Link to="/booking">
-        <Button variant="danger">
-          Book a viewing
-        </Button>
-        </Link>
-        </Col>
-        </Row>
+            <Col className="text-center">
+              <Link to="/booking">
+                <Button variant="danger" type="submit">
+                  Book a viewing
+                </Button>
+              </Link>
+            </Col>
+          </Row>
         </Container>
       </Container>
     </>
