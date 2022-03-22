@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Geocode from "react-geocode";
 import { GoogleMap, LoadScript, Marker, Circle, InfoWindow } from "@react-google-maps/api"
 
 const circleOptions = {
@@ -14,11 +15,27 @@ const circleOptions = {
     zIndex: 1
 }
 
-const Map = ({ center, address }) => {
+const Map = ({ address }) => {
     const [showMarker, setShowMarker] = useState(false)
+    const [latLng, setLatLng] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
+
+    Geocode.setApiKey(process.env.REACT_APP_GOOGLE_MAPS_API_KEY)
+
+    useEffect(() => {
+        Geocode.fromAddress(address).then(
+            (response) => {
+                setLatLng(response.results[0].geometry.location)
+                setIsLoading(false)
+            },
+            (error) => {
+                console.error(error);
+            }
+        );
+    }, [])
 
     return (
-        <LoadScript
+        !isLoading ? <LoadScript
             googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
         >
             <GoogleMap
@@ -26,7 +43,7 @@ const Map = ({ center, address }) => {
                     width: '21.25em',
                     height: '23.75em'
                 }}
-                center={center}
+                center={latLng}
                 zoom={13}
                 options={{
                     disableDefaultUI: true,
@@ -34,7 +51,7 @@ const Map = ({ center, address }) => {
                 }}
             >
                 <Marker
-                    position={center}
+                    position={latLng}
                     icon={{
                         url: '/images/Property-View/Marker.png',
                     }}
@@ -44,12 +61,12 @@ const Map = ({ center, address }) => {
                 />
 
                 <Circle
-                    center={center}
+                    center={latLng}
                     options={circleOptions}
                 />
 
                 {showMarker ? <InfoWindow
-                    position={center}
+                    position={latLng}
                     onClick={() => {
                         setShowMarker((prevState) => prevState = !prevState)
                     }}
@@ -60,7 +77,8 @@ const Map = ({ center, address }) => {
                 </InfoWindow>
                     : null}
             </GoogleMap>
-        </LoadScript>
+        </LoadScript> : null
+
     )
 }
 
