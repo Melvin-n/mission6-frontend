@@ -1,7 +1,7 @@
-import React from 'react'
-
-export default function PropertyCarousel() {
+const PropertyCarousel = () => {
     return (
         null
     )
 }
+
+export default PropertyCarousel;
