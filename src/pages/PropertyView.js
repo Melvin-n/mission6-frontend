@@ -3,11 +3,11 @@ import PropertyCard from '../components/PropertyView/PropertyCard'
 import PropertyCarousel from '../components/PropertyView/PropertyCarousel'
 import Footer from '../components/Footer'
 
-const PropertyView = () => {
+const PropertyView = (Property, List) => {
     return (
         <>
             <Header />
-            <PropertyCard />
+            <PropertyCard Property={Property} />
             <PropertyCarousel />
             <Footer />
         </>
