@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-import BookingTime from '../components/BookingTime.js';
-import Header from '../components/Header.tsx';
-import Footer from '../components/Footer.tsx';
+import BookingTime from "../components/BookingTime.js";
+import Header from "../components/Header.tsx";
+import Footer from "../components/Footer.tsx";
 import Confirm from "../components/Confirm.js";
 
 import "./Booking.css";
-
 
 // or less ideally
 import {
@@ -33,14 +32,14 @@ import {
 //       }}
 
 const Booking = () => {
-  const [test, setTest] = useState(false);
+  // const [test, setTest] = useState(false);
 
   return (
     <>
       <Header />
-      
+
       <Container className="container-main mt-5">
-        <Row className="justify-content-start align-items-end">
+        {/* <Row className="justify-content-start align-items-end">
           <Col className="">
           <Image
             src="http://localhost:3000/images/Book-Viewing/Cool Kids Staying Home-1.png"
@@ -49,8 +48,8 @@ const Booking = () => {
             className="my-0 px-1"
             />
           </Col>
-        </Row>
-      
+        </Row> */}
+
         <Container className="container-2nd mx-5">
           {/* <Container> */}
           <Row>
@@ -79,8 +78,8 @@ const Booking = () => {
             </Col>
             <Col sm={7}>
               <Container>
-                <Confirm />
-                
+                {/* {test && <Confirm />} */}
+
                 <p>Viewing date and time</p>
                 <Row>
                   <Col sm={6}>
@@ -89,10 +88,10 @@ const Booking = () => {
                   <Col sm={6}>
                     <Row>
                       <Col sm={4} className="px-1">
-                      {/* <label for="appt-time">Morning </label>
+                        {/* <label for="appt-time">Morning </label>
                       <input id="appt-time" type="time" name="appt-time" value="13:30" /> */}
- 
-                       <BookingTime />
+
+                        <BookingTime />
                         {/* <DropdownButton
                           id="dropdown-basic-button"
                           variant="light"
@@ -161,8 +160,10 @@ const Booking = () => {
                     <Col className="my-2">
                       <p>Agree to Covid-19 regulation</p>
                       <form>
-                        <label className="checkbox-margin my-2">Read regulation</label>
-                        <input type="checkbox" className="checkbox-color"/>
+                        <label className="checkbox-margin my-2">
+                          Read regulation
+                        </label>
+                        <input type="checkbox" className="checkbox-color" />
                       </form>
                     </Col>
                   </Row>
@@ -178,14 +179,14 @@ const Booking = () => {
           </Row>
           <Row>
             <Col className="text-center">
-              <Link to="/booking">
-                <Button className="mt-3" variant="danger" type="submit">
-                  Book a viewing
-                </Button>
-              </Link>
             </Col>
           </Row>
         </Container>
+        <Link to="/confirm">
+          {/* <Button className="mt-3" variant="danger"> */}
+           Book a viewing
+          {/* </Button> */}
+        </Link>
       </Container>
       <Footer />
     </>
