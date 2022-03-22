@@ -17,6 +17,49 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 const Booking = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [phoneNum, setPhoneNum] = useState("");
+  const [email, setEmail] = useState("");
+  const [sizeViewGroup, setSizeViewGroup] = useState("");
+  const [viewDate, setViewDate] = useState("");
+  const [viewTime, setViewTime] = useState("");
+
+  const reset = () => {
+    setFirstName("");
+    setLastName("");
+    setPhoneNum("");
+    setEmail("");
+    setSizeViewGroup("");
+    setViewDate("");
+    setViewTime("");
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    createUser();
+  };
+
+  const createUser = () => {
+    const baseURL = "http://localhost:5000/api/users";
+
+   const newUser = {
+     firstName,
+     lastName,
+     phoneNum,
+     email,
+     sizeViewGroup,
+     viewDate,
+     viewTime
+   };
+   console.log(newUser);
+   try {
+      // const response = await axios.post(baseURL, newUser);
+      // console.log(response.data);
+   } catch (err) {
+      console.log(err);
+   }
+  };
 
   return (
     <>
@@ -54,11 +97,12 @@ const Booking = () => {
                   <Col sm={6}>
                     <Form.Control type="date" name="" />
                   </Col>
+
                   <Col sm={6}>
-                    <Row>
-                      <Col sm={4} className="px-1">
-                      </Col>
-                    </Row>
+                  <Col className="my-0 mb-3">
+                      <Form.Control type="time" placeholder="Last name" />
+                    </Col>
+
                   </Col>
                 </Row>
                 <p className="mt-3">Your information</p>
