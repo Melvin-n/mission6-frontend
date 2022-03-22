@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import Header from "../components/Header.tsx";
@@ -23,7 +23,6 @@ const Booking = () => {
       <Header />
       <Container className="container-main mt-5">
         <Container className="container-2nd mx-5">
-          {/* <Container> */}
           <Row>
             <Col sm={5}>
               <Card className="mt-2">

@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap');
 
+p {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 200;
+}
+
 .add-to-calendar {
     color: #900F2D;
 }

@@ -5,14 +5,11 @@ import './styles/styles.css'
 import SearchPage from './pages/SearchPage';
 
 import Booking from './pages/Booking.js';
-import Confirm from './components/Confirm.js';
-
-
+import Confirm from './pages/Confirm.js';
 
 const App: React.FC = () => {
 
   const [searchValue, setSearchValue] = useState<string>('')
-
 
   return (
     <div className='App'>
