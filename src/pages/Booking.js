@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from "react-router-dom";
 import BookingTime from '../components/BookingTime.js';
+import Header from '../components/Header.tsx';
+import Footer from '../components/Footer.tsx';
+import Confirm from "../components/Confirm.js";
 
 import "./Booking.css";
 
@@ -30,17 +33,24 @@ import {
 //       }}
 
 const Booking = () => {
-  const [bookValue, setBookValue] = useState("");
+  const [test, setTest] = useState(false);
 
   return (
     <>
-      <Container
-        className="container-main"
-        style={{
-          backgroundImage:
-            "url(http://localhost:3000/images/Book-Viewing/box/Cool Kids Staying Home-1.png)",
-        }}
-      >
+      <Header />
+      
+      <Container className="container-main mt-5">
+        <Row className="justify-content-start align-items-end">
+          <Col className="">
+          <Image
+            src="http://localhost:3000/images/Book-Viewing/Cool Kids Staying Home-1.png"
+            fluid
+            rounded
+            className="my-0 px-1"
+            />
+          </Col>
+        </Row>
+      
         <Container className="container-2nd mx-5">
           {/* <Container> */}
           <Row>
@@ -69,6 +79,8 @@ const Booking = () => {
             </Col>
             <Col sm={7}>
               <Container>
+                <Confirm />
+                
                 <p>Viewing date and time</p>
                 <Row>
                   <Col sm={6}>
@@ -77,7 +89,9 @@ const Booking = () => {
                   <Col sm={6}>
                     <Row>
                       <Col sm={4} className="px-1">
-
+                      {/* <label for="appt-time">Morning </label>
+                      <input id="appt-time" type="time" name="appt-time" value="13:30" /> */}
+ 
                        <BookingTime />
                         {/* <DropdownButton
                           id="dropdown-basic-button"
@@ -165,7 +179,7 @@ const Booking = () => {
           <Row>
             <Col className="text-center">
               <Link to="/booking">
-                <Button variant="danger" type="submit">
+                <Button className="mt-3" variant="danger" type="submit">
                   Book a viewing
                 </Button>
               </Link>
@@ -173,6 +187,7 @@ const Booking = () => {
           </Row>
         </Container>
       </Container>
+      <Footer />
     </>
   );
 };

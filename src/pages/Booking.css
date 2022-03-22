@@ -17,7 +17,12 @@ p {
 
 .booking-button {
  background-color: #BF163D;
- color: white
+ color: white;
+}
+
+.container-main {
+  z-index: -1;
+  /* position: absolute; */
 }
 
 /* .checkbox-color {
