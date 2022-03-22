@@ -4,6 +4,7 @@ import InputField from './components/InputField';
 import './styles/styles.css'
 import './sass/index.scss'
 import SearchPage from './pages/SearchPage';
+import PropertyView from './pages/PropertyView';
 
 
 
@@ -15,7 +16,8 @@ const App: React.FC = () => {
 
   return (
     <div className='App'>
-      <SearchPage />
+      {/* <SearchPage /> */}
+      <PropertyView />
     </div>
   );
 }
