@@ -5,6 +5,7 @@
     --light-grey: #F4F5F4;
 }
 
+
 body {
     width: 100%;
 }
@@ -274,4 +275,3 @@ input[type='checkbox']:checked {
     width: 10rem;
     height: 2.5rem;
     margin-top: 1rem;
-}
