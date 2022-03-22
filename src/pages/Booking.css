@@ -20,11 +20,6 @@ p {
  color: white;
 }
 
-.container-main {
-  z-index: -1;
-  /* position: absolute; */
-}
-
 /* .checkbox-color {
   color: #BF163D;
   border: #BF163D;  

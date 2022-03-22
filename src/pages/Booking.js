@@ -1,55 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-import BookingTime from "../components/BookingTime.js";
 import Header from "../components/Header.tsx";
 import Footer from "../components/Footer.tsx";
-import Confirm from "../components/Confirm.js";
 
 import "./Booking.css";
 
-// or less ideally
-import {
-  Container,
-  Form,
-  Button,
-  Row,
-  Col,
-  Dropdown,
-  DropdownButton,
-  InputGroup,
-  FormControl,
-  Card,
-  Image,
-} from "react-bootstrap";
-
-// import background from '../../public/images/Book-Viewing/Cool Kids Staying Home-1.png';
-//   style={{
-//       backgroundImage: "url(http://localhost:3000/images/Book-Viewing/box/Cool Kids Staying Home-1.png)",
-//     //   backgroundSize: "cover",
-//     //   backgroundRepeat:"no-repeat"
-//       backgroundRepeat:"repeat"
-//       }}
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import Image from 'react-bootstrap/Image';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 const Booking = () => {
-  // const [test, setTest] = useState(false);
 
   return (
     <>
       <Header />
-
       <Container className="container-main mt-5">
-        {/* <Row className="justify-content-start align-items-end">
-          <Col className="">
-          <Image
-            src="http://localhost:3000/images/Book-Viewing/Cool Kids Staying Home-1.png"
-            fluid
-            rounded
-            className="my-0 px-1"
-            />
-          </Col>
-        </Row> */}
-
         <Container className="container-2nd mx-5">
           {/* <Container> */}
           <Row>
@@ -78,8 +50,6 @@ const Booking = () => {
             </Col>
             <Col sm={7}>
               <Container>
-                {/* {test && <Confirm />} */}
-
                 <p>Viewing date and time</p>
                 <Row>
                   <Col sm={6}>
@@ -88,37 +58,6 @@ const Booking = () => {
                   <Col sm={6}>
                     <Row>
                       <Col sm={4} className="px-1">
-                        {/* <label for="appt-time">Morning </label>
-                      <input id="appt-time" type="time" name="appt-time" value="13:30" /> */}
-
-                        <BookingTime />
-                        {/* <DropdownButton
-                          id="dropdown-basic-button"
-                          variant="light"
-                          title="Morning"
-                        >
-                          <Dropdown.Item href="#/action-1">10:00</Dropdown.Item>
-                          <Dropdown.Item href="#/action-2">11:00</Dropdown.Item>
-                        </DropdownButton>
-                      </Col>
-                      <Col sm={4} className="mr-1">
-                        <DropdownButton
-                          id="dropdown-basic-button"
-                          variant="light"
-                          title="Afternoon"
-                        >
-                          <Dropdown.Item href="#/action-1">1:00</Dropdown.Item>
-                          <Dropdown.Item href="#/action-2">3:00</Dropdown.Item>
-                        </DropdownButton>
-                      </Col>
-                      <Col sm={4} className="px-0">
-                        <DropdownButton
-                          id="dropdown-basic-button"
-                          variant="light"
-                          title="Evening"
-                        >
-                          <Dropdown.Item href="#/action-1">5:00</Dropdown.Item>
-                        </DropdownButton> */}
                       </Col>
                     </Row>
                   </Col>
@@ -179,14 +118,14 @@ const Booking = () => {
           </Row>
           <Row>
             <Col className="text-center">
-            </Col>
+          <Link to="/confirm">
+          <Button className="mt-3" variant="danger">
+           Book a viewing
+          </Button>
+        </Link>
+          </Col>
           </Row>
         </Container>
-        <Link to="/confirm">
-          {/* <Button className="mt-3" variant="danger"> */}
-           Book a viewing
-          {/* </Button> */}
-        </Link>
       </Container>
       <Footer />
     </>
