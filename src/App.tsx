@@ -9,7 +9,6 @@ import './sass/index.scss'
 import SearchPage from './pages/SearchPage';
 import SearchResults from './pages/SearchResults';
 import PropertyView from './pages/PropertyView';
-import Booking from './pages/Booking.js';
 import Booking from './pages/Booking';
 import PropertyDetails from './components/propertyDetailsType';
 
