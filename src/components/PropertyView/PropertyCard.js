@@ -50,7 +50,7 @@ const PropertyCard = ({ Property }) => {
                             <p className="bathrooms">{`${Property.bathrooms} Bathrooms`}</p>
                         </div>
                         <div className="tile">
-                            <p className="facing">{`${Property.facingDirection} Facing`}</p>
+                            <p className="facing">{`${Property.facingDirection.charAt(0).toUpperCase() + Property.facingDirection.slice(1)} Facing`}</p>
                         </div>
                         <div className="tile">
                             <p className="pet">{Property.petFriendly ? 'Pet Friendly' : 'Not Pet Friendly'}</p>
@@ -63,13 +63,13 @@ const PropertyCard = ({ Property }) => {
                 </div>
                 <div className="button-group">
                     <button className="button button-outline">
-                        <i class="fa-regular fa-heart" /> Save Property
+                        <i className="fa-regular fa-heart" /> Save Property
                     </button>
                     <button className="button button-outline">
-                        Book A Viewing
+                        Book a Viewing
                     </button>
                     <button className="button button-solid">
-                        Apply To Rent
+                        Apply to Rent
                     </button>
                 </div>
             </div>
