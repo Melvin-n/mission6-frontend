@@ -1,11 +1,16 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
-import InputField from './components/InputField';
 import './styles/styles.css'
 import './sass/index.scss'
 import SearchPage from './pages/SearchPage';
 import PropertyView from './pages/PropertyView';
+
+import Booking from './pages/Booking.js';
+
+
+
 
 const App: React.FC = () => {
 
@@ -28,8 +33,14 @@ const App: React.FC = () => {
   return (
 
     <div className='App'>
-      {/* <SearchPage /> */}
-    { !isLoading ? <PropertyView Property={properties[0]} List={properties}/> : null }
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<SearchPage />} />
+          <Route path="/booking" element={<Booking />} />
+        </Routes>
+      </BrowserRouter>
+
+      {/* { !isLoading ? <PropertyView Property={properties[0]} List={properties}/> : null } */}
     </div>
   );
 }

@@ -8,7 +8,8 @@ const Footer: React.FC = () => {
             <div id='signup-box'>
                 <h3>Why don't you let us do the hardwork?</h3>
                 <p id='for-only-text'>For only</p>
-                <span><h4>$199</h4><p>one off</p></span>
+                <span><h4 id='price-off-signup-box'>$199</h4><p>one off</p></span>
+
                 <p id='signup-box-info'>One of our highly trained team members will work hard to find you the perfect property so that you don’t have to.</p>
                 <h4 id='signup-box-features-text'>Features</h4>
                 <ul id='signup-box-features'>
