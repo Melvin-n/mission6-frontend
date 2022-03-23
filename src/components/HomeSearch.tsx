@@ -1,9 +1,17 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import '../styles/homesearch.css'
+import PropertyDetails from './propertyDetailsType';
 
-const HomeSearch: React.FC = () => {
+interface Props {
+  searchResults: PropertyDetails[]
+  setSearchResults: ([]) => void
 
-  const [suburb, setSuburb] = useState<string>('')
+}
+
+const HomeSearch: React.FC<Props> = (props) => {
+  let navigate = useNavigate()
+  const [suburb, setSuburb] = useState<string>(' ')
   const [minBedrooms, setMinBedrooms] = useState<number>(1)
   const [maxBedrooms, setMaxBedrooms] = useState<number>(6)
   const [minWeeklyRental, setMinWeeklyRental] = useState<number>(1)
@@ -17,7 +25,8 @@ const HomeSearch: React.FC = () => {
   const [includeParkDistance, setIncludeParkDistance] = useState(false)
   const [parkDistance, setParkDistance] = useState<number>(500)
   const [keyWords, setKeyWords] = useState<string>()
-  const [searchResults, setSearchResults] = useState<[]>()
+  
+  
 
   interface Query {
     address :{$regex: `.*${string}*.`, $options: string}
@@ -45,14 +54,13 @@ const HomeSearch: React.FC = () => {
     "distanceFromPark": {$lte: includeParkDistance ? parkDistance : 9999999},
     "distanceFromGrocery": {$lte: includeGroceryDistance ? groceryStoreDistance : 9999999}, 
     "distanceFromSchool": {$lte:includeSchoolDistance ? schoolDistance : 9999999}
-      
-    };
 
+    };
     return query
   }
 
   const querySearch = (): void => {
-    fetch('http://localhost:4000/api/properties/query', {
+    fetch('http://mym6-alb-2138763550.us-east-2.elb.amazonaws.com/api/properties/query', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json'
@@ -62,9 +70,10 @@ const HomeSearch: React.FC = () => {
       })
     })
     .then((res) => res.json())
-    .then(data => {
+    .then((data) => {
       console.log(data)
-      setSearchResults(data)
+      props.setSearchResults(data) 
+      navigate('/results')  
     })
   }
 
@@ -103,23 +112,23 @@ const HomeSearch: React.FC = () => {
                 <h5 className='form-item-title'>Weekly rental</h5>
                 <div id='rental-price-form-section'>
                 <select name='min-rent' id='min-rent' onChange={(e) => setMinWeeklyRental(parseInt(e.target.value))}>
-                    <option value={100}>100</option>
-                    <option value={200}>200</option>
-                    <option value={300}>300</option>
-                    <option value={500}>500</option>
-                    <option value={1000}>1000</option>
-                    <option value={2000}>2000</option>
-                    <option value={3000}>3000+</option>
+                    <option value={100}>$100</option>
+                    <option value={200}>$200</option>
+                    <option value={300}>$300</option>
+                    <option value={500}>$500</option>
+                    <option value={1000}>$1000</option>
+                    <option value={2000}>$2000</option>
+                    <option value={3000}>$3000+</option>
                   </select>
                   <p>to</p>
                   <select name='max-rent' id='max-rent' onChange={(e) => setMaxWeeklyRental(parseInt(e.target.value))}>
-                    <option value={100}>100</option>
-                    <option value={200}>200</option>
-                    <option value={300}>300</option>
-                    <option value={500}>500</option>
-                    <option value={1000}>1000</option>
-                    <option value={2000}>2000</option>
-                    <option value={3000}>3000+</option>
+                    <option value={100}>$100</option>
+                    <option value={200}>$200</option>
+                    <option value={300}>$300</option>
+                    <option value={500}>$500</option>
+                    <option value={1000}>$1000</option>
+                    <option value={2000}>$2000</option>
+                    <option value={3000}>$3000+</option>
                   </select>
                 </div>
               </div>

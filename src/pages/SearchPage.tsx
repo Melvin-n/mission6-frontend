@@ -1,13 +1,22 @@
-import React from 'react'
+import React  from 'react'
 import Header from '../components/Header'
 import HomeSearch from '../components/HomeSearch'
 import Footer from '../components/Footer'
+import PropertyDetails from '../components/propertyDetailsType';
 
-const SearchPage: React.FC = () => {
+
+
+interface Props {
+  searchResults: PropertyDetails[]
+  setSearchResults: ([]) => void
+
+}
+
+const SearchPage: React.FC<Props> = (props) => {
   return (
     <>
         <Header />
-        <HomeSearch />
+        <HomeSearch searchResults={props.searchResults} setSearchResults={props.setSearchResults}/>
         <Footer />
     </>
   )
