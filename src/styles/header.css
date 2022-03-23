@@ -22,6 +22,7 @@ body {
     padding-left: 0.5rem;
     padding-right: 0;
     gap: 2rem;
+
 }
 
 #header-navbar-list {
@@ -35,6 +36,8 @@ body {
     width: 65%;
     
 }
+
+
 
 .header-navbar-list-item {
     width: 15rem;
@@ -52,6 +55,7 @@ body {
 
 }
 
+
 .header-navbar-list-item:hover {
     background-color: #900F2D;
     cursor: pointer;
@@ -64,6 +68,7 @@ body {
     padding-left: 0;
     padding-right: 0;
     margin-right: 0;
+
 
 }
 
@@ -89,6 +94,7 @@ body {
    font-size: 1rem; 
    font-weight: 400;
    align-self: flex-end;
+
 }
 
 #header-user-info img {
