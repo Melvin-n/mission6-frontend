@@ -9,6 +9,7 @@ const Footer: React.FC = () => {
                 <h3>Why don't you let us do the hardwork?</h3>
                 <p id='for-only-text'>For only</p>
                 <span><h4 id='price-off-signup-box'>$199</h4><p>one off</p></span>
+
                 <p id='signup-box-info'>One of our highly trained team members will work hard to find you the perfect property so that you don’t have to.</p>
                 <h4 id='signup-box-features-text'>Features</h4>
                 <ul id='signup-box-features'>
@@ -28,7 +29,8 @@ const Footer: React.FC = () => {
                         src='./images/Search/icon/outlined/other/mail/mail.png'
                         alt='mail-icon'
                         />
-                        <p className='footer-hero-contact-item-text'>example@website.com</p>
+
+                        <p className='footer-hero-contact-item-text'>info@aucklandprop.co.nz</p>
                     </li>
                     <li className='footer-hero-contact-item'>
                         <img 
@@ -36,7 +38,8 @@ const Footer: React.FC = () => {
                         src='./images/Search/icon/outlined/other/phone/phone.png'
                         alt='phone-icon'
                         />
-                        <p className='footer-hero-contact-item-text'>(406) 555-0120</p>
+
+                        <p className='footer-hero-contact-item-text'>(09) 262 0561</p>
                     </li>
                     <li className='footer-hero-contact-item'>
                         <img 
@@ -44,7 +47,8 @@ const Footer: React.FC = () => {
                         src='./images/Search/icon/outlined/other/location/map pin.png'
                         alt='location-icon'
                         />
-                        <p className='footer-hero-contact-item-text'>8502 Preston Rd. Inglewood, Maine 98380</p>
+
+                        <p className='footer-hero-contact-item-text'>1/63 Corinthian Drive, Albany, Auckland 0632</p>
                     </li>
                 </ul>
             </div>

@@ -211,6 +211,7 @@ const HomeSearch: React.FC = () => {
             </section>
         </form>
         <button id='form-search-button' onClick={querySearch}>Search</button>
+
     </div>
   )
 }

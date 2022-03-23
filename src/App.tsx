@@ -8,6 +8,7 @@ import Booking from './pages/Booking.js';
 
 
 
+
 const App: React.FC = () => {
 
   const [searchValue, setSearchValue] = useState<string>('')
@@ -21,6 +22,7 @@ const App: React.FC = () => {
           <Route path="/booking" element={<Booking />} />
         </Routes>
       </BrowserRouter>
+
 
     </div>
   );
