@@ -63,13 +63,13 @@ const PropertyCard = ({ Property }) => {
                 </div>
                 <div className="button-group">
                     <button className="button button-outline">
-                        <i class="fa-regular fa-heart" /> Save Property
+                        <i className="fa-regular fa-heart" /> Save Property
                     </button>
                     <button className="button button-outline">
-                        Book A Viewing
+                        Book a Viewing
                     </button>
                     <button className="button button-solid">
-                        Apply To Rent
+                        Apply to Rent
                     </button>
                 </div>
             </div>
