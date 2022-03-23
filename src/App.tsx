@@ -37,10 +37,9 @@ const App: React.FC = () => {
         <Routes>
           <Route path='/' element={<SearchPage />} />
           <Route path="/booking" element={<Booking />} />
+          { !isLoading ? <Route path="/view" element={<PropertyView Property={properties[0]} List={properties}/>} /> :null }
         </Routes>
       </BrowserRouter>
-
-      {/* { !isLoading ? <PropertyView Property={properties[0]} List={properties}/> : null } */}
     </div>
   );
 }
