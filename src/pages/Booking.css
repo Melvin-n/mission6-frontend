@@ -2,9 +2,34 @@
 /* CSS rules to specify families:
 font-family: 'Mulish', sans-serif; */
 
-p {
+.yourinfo {
     font-family: 'Mulish', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
+    font-size: medium;
+}
+
+.group-info{
+  font-family: 'Mulish', sans-serif;
+  font-weight: 300;
+  font-size: medium;
+}
+
+.view-date-time {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 300;
+  font-size: medium;
+}
+
+.agree-covid {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 300;
+  font-size: medium;
+} 
+
+.movein-date {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 300;
+  font-size: medium;
 }
 
 .card-title {
@@ -17,7 +42,7 @@ p {
 
 .booking-button {
  background-color: #BF163D;
- color: white
+ color: white;
 }
 
 /* .checkbox-color {
