@@ -1,0 +1,9 @@
+@use "../abstracts" as *;
+
+.card-right {
+  float: right;
+  width: 35em;
+  height: 100%;
+  border: 1px solid blue;
+  margin-right: 3.5%;
+}
