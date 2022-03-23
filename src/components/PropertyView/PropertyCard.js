@@ -4,27 +4,26 @@ import Map from '../PropertyView/Map'
 
 
 
-const PropertyCard = ({ Property, List }) => {
-
+const PropertyCard = ({ Property }) => {
     return (
         <div className='property-card'>
             <div className='card-left'>
                 <div className='left-price'>
-                    <h3 className='address'>{Property.Property.address}</h3>
-                    <h4 className='price'>{`$${Property.Property.pricePerWeek}/wk`}</h4>
+                    <h3 className='address'>{Property.address}</h3>
+                    <h4 className='price'>{`$${Property.pricePerWeek}/wk`}</h4>
                 </div>
                 <div className='left-contact'>
                     <p className='manager'>
-                        <b> {Property.Property.propertyManager}</b> <br />
+                        <b> {Property.propertyManager}</b> <br />
                         Property Manager
                     </p>
                     <p className='contact'>
-                        {`Email: ${Property.Property.propertyManagerEmail}`} <br />
-                        {`Phone: ${Property.Property.propertyManagerPhone}`}
+                        {`Email: ${Property.propertyManagerEmail}`} <br />
+                        {`Phone: ${Property.propertyManagerPhone}`}
                     </p>
                 </div>
 
-                <Map address={Property.Property.address} />
+                <Map address={Property.address} />
             </div>
             <div className='card-right'>
 
