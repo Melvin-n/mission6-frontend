@@ -50,7 +50,7 @@ const PropertyCard = ({ Property }) => {
                             <p className="bathrooms">{`${Property.bathrooms} Bathrooms`}</p>
                         </div>
                         <div className="tile">
-                            <p className="facing">{`${Property.facingDirection} Facing`}</p>
+                            <p className="facing">{`${Property.facingDirection.charAt(0).toUpperCase() + Property.facingDirection.slice(1)} Facing`}</p>
                         </div>
                         <div className="tile">
                             <p className="pet">{Property.petFriendly ? 'Pet Friendly' : 'Not Pet Friendly'}</p>
