@@ -14,11 +14,11 @@ const PropertyCard = ({ Property, List }) => {
                     <h4 className='price'>{`$${Property.Property.pricePerWeek}/wk`}</h4>
                 </div>
                 <div className='left-contact'>
-                    <p className="manager">
+                    <p className='manager'>
                         <b> {Property.Property.propertyManager}</b> <br />
                         Property Manager
                     </p>
-                    <p className="contact">
+                    <p className='contact'>
                         {`Email: ${Property.Property.propertyManagerEmail}`} <br />
                         {`Phone: ${Property.Property.propertyManagerPhone}`}
                     </p>
