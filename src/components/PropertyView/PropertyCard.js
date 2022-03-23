@@ -26,7 +26,13 @@ const PropertyCard = ({ Property }) => {
                 <Map address={Property.address} />
             </div>
             <div className='card-right'>
-                <div className="photos"></div>
+                <div className="photos">
+                    <div className="photos-left"></div>
+                    <div className="photos-right">
+                        <div className="photos-right-upper"></div>
+                        <div className="photos-right-lower"></div>
+                    </div>
+                </div>
                 <div className="features">
                     <div className="features-top">
                         <div className="tile">
