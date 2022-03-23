@@ -1,67 +1,18 @@
-import {useState} from "react";
+// import {useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useNavigate } from "react-router-dom";
 import Header from "../components/Header.tsx";
 import Footer from "../components/Footer.tsx";
 // import axios from "axios";
-import "./Booking.css";
+import "./Confirm.css";
 
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
 
-const Booking = (prop) => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [phoneNum, setPhoneNum] = useState("");
-  const [email, setEmail] = useState("");
-  const [sizeViewGroup, setSizeViewGroup] = useState("");
-  const [viewDate, setViewDate] = useState("");
-  const [viewTime, setViewTime] = useState("");
-
-  const navigate = useNavigate();
-
-  const reset = () => {
-    setFirstName("");
-    setLastName("");
-    setPhoneNum("");
-    setEmail("");
-    setSizeViewGroup("");
-    setViewDate("");
-    setViewTime("");
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // console.log(firstName, lastName, phoneNum, email, sizeViewGroup, viewDate, viewTime );
-    // navigate('/confirm');
-    createUser();
-  };
-
-  const createUser = async() => {
-    const baseURL = "http://localhost:5000/api/users";
-
-    const newUser = {
-     firstName,
-     lastName,
-     phoneNum,
-     email,
-     sizeViewGroup,
-     viewDate,
-     viewTime
-   };
-   console.log(newUser);
-  //  try {
-      // const response = await axios.post(baseURL, newUser);
-      // console.log(response.data);
-  //  } catch (err) {
-      // console.log(err);
-  //  }
-  };
+const Confirm = (prop) => {
 
   return (
     <>
@@ -95,95 +46,6 @@ const Booking = (prop) => {
             <Col sm={7}>
               
 
-                {/* <Form>
-                  <Form.Text className="mb-4 pb-5 view-date-time">Viewing date and time</Form.Text>
-                 <Row>
-                  <Col sm={6}>
-                    <Form.Control 
-                      type="date" 
-                      onChange={(e) => setViewDate(e.target.value)}
-                      value={viewDate}
-                    />
-                  </Col>
-                  <Col sm={6}>
-                    <Col className="my-0 mb-3">
-                      <Form.Control 
-                        type="time"
-                        onChange={(e) => setViewTime(e.target.value)}
-                        value={viewTime} />
-                    </Col>
-                  </Col>
-                 </Row>
-                  <Form.Text className="mb-4 pb-5 yourinfo">Your information</Form.Text>
-                   <Row>
-                    <Col className="my-0 mb-3">
-                      <Form.Control 
-                        type="text" 
-                        placeholder="First name" 
-                        onChange={(e) => setFirstName(e.target.value)}
-                        value={firstName} /> 
-                    </Col>
-                    <Col className="my-0 mb-3">
-                      <Form.Control 
-                        type="text" 
-                        placeholder="Last name"
-                        onChange={(e) => setLastName(e.target.value)}
-                        value={lastName} />
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="my-2">
-                      <Form.Control 
-                        type="text" 
-                        placeholder="Phone number"
-                        onChange={(e) => setPhoneNum(e.target.value)}
-                        value={phoneNum} />
-                    </Col>
-                    <Col className="my-2">
-                      <Form.Group as={Col} controlId="formGridEmail">
-                        <Form.Control 
-                          type="email" 
-                          placeholder="Enter email"
-                          onChange={(e) => setEmail(e.target.value)} 
-                          value={email} />
-                      </Form.Group>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="my-2">
-                       <Form.Text className="mb-4 pb-5 group-info ">Group information</Form.Text>
-                        <Form.Select 
-                          aria-label="Default select example"
-                          onChange={(e) => setSizeViewGroup(e.target.value)}
-                          value={sizeViewGroup}>
-                          <option>Size of view group</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </Form.Select>
-                    </Col>
-                    <Col className="my-2">
-                       <Form.Text className="mb-4 pb-5 agree-covid" >Agree to Covid-19 regulation</Form.Text>
-                       <Form.Check 
-                         className="checkbox-color ml-5" 
-                         type="checkbox"
-                        />
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col sm={6}>
-                       <Form.Text className="mb-4 pb-5 movein-date" >Preferred move in date</Form.Text>
-                       <Form.Control type="date" />
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="text-center">
-                     <Button className="mt-3" variant="danger" onClick={handleSubmit}>
-                        Book a viewing
-                     </Button>
-                   </Col>
-                  </Row>
-                </Form> */}
             </Col>
           </Row>
         </Container>
@@ -193,4 +55,4 @@ const Booking = (prop) => {
   );
 };
 
-export default Booking;
+export default Confirm;

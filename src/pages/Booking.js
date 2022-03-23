@@ -3,8 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header.tsx";
 import Footer from "../components/Footer.tsx";
-// import axios from "axios";
 import "./Booking.css";
+// import axios from "axios";
 
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -56,10 +56,10 @@ const Booking = (prop) => {
    };
    console.log(newUser);
   //  try {
-      // const response = await axios.post(baseURL, newUser);
-      // console.log(response.data);
+  //     const response = await axios.post(baseURL, newUser);
+  //     console.log(response.data);
   //  } catch (err) {
-      // console.log(err);
+  //     console.log(err);
   //  }
   };
 
@@ -163,8 +163,8 @@ const Booking = (prop) => {
                     <Col className="my-2">
                        <Form.Text className="mb-4 pb-5 agree-covid" >Agree to Covid-19 regulation</Form.Text>
                        <Form.Check 
-                         className="checkbox-color ml-5" 
                          type="checkbox"
+                         variant="danger"
                         />
                     </Col>
                   </Row>
