@@ -1,0 +1,29 @@
+@use "./partials/PropertyCardLeft";
+@use "./partials/PropertyCardRight";
+
+.property-card {
+  height: 48.125em;
+  width: 62.5em;
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 3.5em;
+  margin-bottom: 3.5em;
+  background-color: #fff;
+}
+
+.property-card::before {
+  content: url(../../public/images/Property-View/HouseIllustration.png);
+  position: absolute;
+  top: 22%;
+  bottom: 0;
+  left: 0;
+  right: 35%;
+  z-index: -1;
+}
+
+.property-card::after {
+  content: url(../../public/images/Property-View/PeopleIllustration.png);
+  z-index: -1;
+  position: absolute;
+  right: 12%;
+  bottom: -2%;
+}
