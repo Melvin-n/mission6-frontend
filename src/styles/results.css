@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap');
+
+
+:root {
+    --main-red: #BF163D;
+    --active-red: #900F2D;
+    --main-grey: #6C7476;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#results-section {
+    background-image: url('../../public/images/Search/merge-road.png');
+    height: 180vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+}
+
+#display-results {
+    margin-left: 19rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#display-results-title {
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+.property-result-card {
+    width: 25.5rem;
+    box-shadow: 3px 3px 3px 3px rgb(197, 196, 196);
+    background-color: white;
+    height: 26rem;
+}
+
+.property-card-image {
+    width: 100%;
+    height: 55%;
+}
+
+.property-card-details {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+}
+
+.property-card-subtitle {
+    font-size: 1.2rem;
+    color: var(--main-red);
+    padding: 0.6rem 1rem;
+    font-weight: 700;
+    font-family: 'Mulish', sans-serif;
+}
+
+.property-card-address {
+    font-size: 1.1rem;
+    color: var(--main-grey);
+    letter-spacing: 0.2px;
+    padding: 0.4rem 1rem;
+
+}
+
+.property-card-price {
+    font-size: 2.1rem;
+    font-weight: 700;
+    padding: 0.4rem 1rem;
+
+}
+
+.right-property-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    width: 30%;
+}
+
+.card-icon-set {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+}
+
+.card-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.icon-value {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0.8rem 0.7rem 0.5rem 0.7rem;
+}
+
+.card-check {
+    color: black;
+}
+
+#result-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+}
+
+#page-nav {
+    align-self: center;
+    margin-top: 5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--main-red);
+    font-family: 'Mulish', sans-serif;
+}
