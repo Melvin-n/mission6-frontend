@@ -1,0 +1,50 @@
+
+#refine-search-form {
+    width: 15rem;
+    border: 2px solid #BF163D;
+    padding: 1rem;
+    box-shadow: 1px 1px 10px 5px rgb(197, 196, 196);
+    border-left: none;
+    position: absolute;
+    left: 0;
+    top: 10rem;
+    background-color: white;
+    height: 37rem;
+
+}
+
+.refine-search-input {
+    border-bottom: 2px solid #BF163D;
+}
+
+#refine-search-title {
+    font-size: 1.5rem;
+    text-align: center;
+    color:#BF163D;
+
+}
+
+#form-bottom-section {
+    border-top: none;
+}
+
+#form-suburb {
+    width: 100%;
+}
+
+.refine-search-button {
+    border: 2px solid var(--main-red);
+    outline: none;
+    color: var(--main-red);
+    width: 65%;
+    height: 2rem;
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: white;
+    margin-top: 2rem;
+
+}
+
+#pets-section {
+    margin-left: 1rem;
+}
