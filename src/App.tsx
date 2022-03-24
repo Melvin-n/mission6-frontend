@@ -24,11 +24,11 @@ const App: React.FC = () => {
 
   useEffect(() => {
     axios.get('http://mym6-alb-2138763550.us-east-2.elb.amazonaws.com/api/properties')
-    .then(res => {
+    .then((res: any) => {
       setProperties(res.data)
       setIsLoading(false)
     })
-    .catch((error) => {
+    .catch((error: any) => {
       console.error(error)
     })
   }, []) 
