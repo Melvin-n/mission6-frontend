@@ -26,7 +26,7 @@ interface Between {
 
 const RefineSearch: React.FC<Props> = (props)  => {
 
-    const [suburb, setSuburb] = useState<string>('')
+    const [suburb, setSuburb] = useState<string>(' ')
     const [minBedrooms, setMinBedrooms] = useState<number>(1)
     const [maxBedrooms, setMaxBedrooms] = useState<number>(6)
     const [minWeeklyRental, setMinWeeklyRental] = useState<number>(1)
