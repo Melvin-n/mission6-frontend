@@ -7,10 +7,13 @@ import './styles/styles.css'
 import './sass/index.scss'
 
 import SearchPage from './pages/SearchPage';
+
 import SearchResults from './pages/SearchResults';
 import PropertyView from './pages/PropertyView';
 import Booking from './pages/Booking';
 import PropertyDetails from './components/propertyDetailsType';
+import Confirm from './pages/Confirm.js';
+
 
 
 
@@ -40,6 +43,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path='/' element={<SearchPage searchResults={searchResults} setSearchResults={setSearchResults} />} />
           <Route path="/booking" element={<Booking />} />
+          <Route path="/confirm" element={<Confirm />} />
           { !isLoading ? <Route path="/view" element={<PropertyView Property={properties[0]} List={properties}/>} /> :null }
           <Route path='/results' element={<SearchResults searchResults={searchResults} setSearchResults={setSearchResults}/>} />
         </Routes>
