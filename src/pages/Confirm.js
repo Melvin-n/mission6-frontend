@@ -44,7 +44,7 @@ async function getUser() {
                 </Card.Title>
                 <Row>
                   <Image
-                    src="http://localhost:3000/images/Book-Viewing/Property card.png"
+                    src="./images/Book-Viewing/Property card.png"
                     fluid
                     rounded
                     className="my-0 px-1"
@@ -52,7 +52,7 @@ async function getUser() {
                 </Row>
                 <Row>
                   <Image
-                    src="http://localhost:3000/images/Book-Viewing/box/small.png"
+                    src="./images/Book-Viewing/box/small.png"
                     fluid
                     rounded
                     className="mb-4 pe-4"
@@ -97,7 +97,7 @@ async function getUser() {
                   <Card.Text className="mt-4">Add to calendar</Card.Text>
                 </Card> */}
                <Image
-                  src="http://localhost:3000/images/Confirmation/image 1.png"
+                  src="./images/Confirmation/image 1.png"
                   fluid
                   rounded
                   className="mt-2"

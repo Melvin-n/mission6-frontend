@@ -55,7 +55,7 @@ const Booking = (props) => {
       viewTime
     };
 
-    fetch('http://localhost:4000/api/booking', {
+    fetch('http://mym6-alb-2138763550.us-east-2.elb.amazonaws.com/api/booking', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json'
