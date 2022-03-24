@@ -26,11 +26,7 @@ const PropertyCard = ({ Property }) => {
                 <Map address={Property.address} />
             </div>
             <div className='card-right'>
-<<<<<<< HEAD
-            <div className="photos">
-=======
                 <div className="photos">
->>>>>>> 63ed609c24d2ad5e0309f1c1c362bb7b617aff5e
                     <div className="photos-left">
                         <img src={Property.image} alt={`${Property._id}`} />
                     </div>
