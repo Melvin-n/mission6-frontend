@@ -14,7 +14,7 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
 
-const Booking = (prop) => {
+const Booking = (props) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [phoneNum, setPhoneNum] = useState("");
@@ -46,22 +46,38 @@ const Booking = (prop) => {
     const baseURL = "http://localhost:5000/api/users";
 
     const newUser = {
-     firstName,
-     lastName,
-     phoneNum,
-     email,
-     sizeViewGroup,
-     viewDate,
-     viewTime
-   };
-   console.log(newUser);
+      firstName,
+      lastName,
+      phoneNum,
+      email,
+      sizeViewGroup,
+      viewDate,
+      viewTime
+    };
+
+    fetch('http://localhost:4000/api/booking', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        query: newUser
+      })
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      props.setBookingConfirm(data)  
+      navigate('/confirm')
+    })
+  }
+
   //  try {
   //     const response = await axios.post(baseURL, newUser);
   //     console.log(response.data);
   //  } catch (err) {
   //     console.log(err);
   //  }
-  };
+  
 
   return (
     <>
