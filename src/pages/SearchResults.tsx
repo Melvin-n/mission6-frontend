@@ -8,7 +8,7 @@ import PropertyDetails from '../components/propertyDetailsType';
 
 interface Props {
     searchResults: PropertyDetails[]
-    setSearchResults: ([]) => void
+    setSearchResults: (arg0: PropertyDetails[]) => void
   
   }
 

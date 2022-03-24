@@ -1,28 +1,35 @@
-import React  from 'react'
+import React, {useEffect, useRef} from 'react'
 import RefineSearch from './RefineSearch'
 import '../styles/results.css'
 import PropertyDetails from './propertyDetailsType';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios'
+
 
 
 
 interface Props {
   searchResults: PropertyDetails[]
-  setSearchResults: ([]) => void
+  setSearchResults: (arg0: PropertyDetails[]) => void
 
-}
-
-//take meter value and return formatted meters/kms
-const metersToKilometers = (meters: number): string => {
-  let distance: string;
-  if (meters > 999) {
-    distance = (meters/1000).toString() + 'km'
-  } else {
-    distance = meters.toString() + 'm'
-  }
-  return distance
 }
 
 const Results: React.FC<Props> = (props) => {
+
+
+
+  //take meter value and return formatted meters/kms
+  const metersToKilometers = (meters: number): string => {
+    let distance: string;
+    if (meters > 999) {
+      distance = (meters/1000).toString() + 'km'
+    } else {
+      distance = meters.toString() + 'm'
+    }
+    return distance
+  }
+
+ 
   return (
     <div id='results-section'>
         <RefineSearch  searchResults={props.searchResults} setSearchResults={props.setSearchResults}/>

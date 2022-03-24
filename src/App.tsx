@@ -16,7 +16,6 @@ import Confirm from './pages/Confirm.js';
 
 
 
-
 const App: React.FC = () => {
 
 
@@ -24,6 +23,7 @@ const App: React.FC = () => {
   const [searchResults, setSearchResults] = useState<PropertyDetails[]>([])
   const [properties, setProperties] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+
 
   useEffect(() => {
     axios.get('http://mym6-alb-2138763550.us-east-2.elb.amazonaws.com/api/properties')
