@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+.tile-lower-left {
+  padding-top: 0.125em;
+  padding-left: 0.3125em;
+  text-align: left;
+  height: 7.9375em;
+  width: 50%;
+  float: left;
+}
+
+.tile-heading {
+  color: $primary;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.tile-address {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.tile-price {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+}

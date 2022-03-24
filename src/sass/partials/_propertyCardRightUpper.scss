@@ -10,27 +10,36 @@
 }
 
 .photos-left {
-  background: url(../../../public/images/houses/house1.png);
+  float: left;
+  height: 100%;
+  width: 20em;
+}
+
+.photos-left > img {
   background-size: cover;
   height: 100%;
-  width: 320px;
-  float: left;
+  width: 20em;
 }
 .photos-right {
   float: right;
   height: 100%;
-  width: 233px;
+  width: 14.5625em;
 }
 
 .photos-right-upper {
-  background: url(../../../public/images/houses/interior1.png);
-  background-size: cover;
   height: 49%;
   width: 100%;
   margin-bottom: 2%;
 }
+
+.photos-right-upper > img,
+.photos-right-lower > img {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
 .photos-right-lower {
-  background: url(../../../public/images/houses/interior3.jpg);
   background-size: cover;
   height: 49%;
   width: 100%;

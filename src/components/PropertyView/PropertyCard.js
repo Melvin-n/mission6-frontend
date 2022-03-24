@@ -27,32 +27,38 @@ const PropertyCard = ({ Property }) => {
             </div>
             <div className='card-right'>
                 <div className="photos">
-                    <div className="photos-left"></div>
+                    <div className="photos-left">
+                        <img src={Property.image} alt={`${Property._id}`} />
+                    </div>
                     <div className="photos-right">
-                        <div className="photos-right-upper"></div>
-                        <div className="photos-right-lower"></div>
+                        <div className="photos-right-upper">
+                            <img src={Property.subimages[0]} alt={`${Property._id}`} />
+                        </div>
+                        <div className="photos-right-lower">
+                            <img src={Property.subimages[1]} alt={`${Property._id}`} />
+                        </div>
                     </div>
                 </div>
                 <div className="features">
                     <div className="features-top">
-                        <div className="tile">
+                        <div className="property-card-tile">
                             <p className="bedrooms">{`${Property.bedrooms} Bedrooms`}</p>
                         </div>
-                        <div className="tile">
+                        <div className="property-card-tile">
                             <p className="driveway">{Property.driveway ? 'Driveway' : 'None'}</p>
                         </div>
-                        <div className="tile">
+                        <div className="property-card-tile">
                             <p className="fenced">{Property.fullyFenced ? 'Fully Fenced' : 'Not Fully Fenced'}</p>
                         </div>
                     </div>
                     <div className="features-bottom">
-                        <div className="tile">
+                        <div className="property-card-tile">
                             <p className="bathrooms">{`${Property.bathrooms} Bathrooms`}</p>
                         </div>
-                        <div className="tile">
+                        <div className="property-card-tile">
                             <p className="facing">{`${Property.facingDirection.charAt(0).toUpperCase() + Property.facingDirection.slice(1)} Facing`}</p>
                         </div>
-                        <div className="tile">
+                        <div className="property-card-tile">
                             <p className="pet">{Property.petFriendly ? 'Pet Friendly' : 'Not Pet Friendly'}</p>
                         </div>
                     </div>
