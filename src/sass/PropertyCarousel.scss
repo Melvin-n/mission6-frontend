@@ -1,0 +1,40 @@
+@use "./partials/PropertyCarouselLowerLeft";
+@use "./partials/PropertyCarouselLowerRight";
+
+.property-carousel {
+  height: 24.75em;
+  width: 100%;
+  text-align: center;
+  padding-left: 3.125em;
+  margin-bottom: 6.25em;
+}
+
+.carousel-heading {
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 2rem;
+}
+
+.tiles {
+  height: 21.1875em;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.tile {
+  padding: 0;
+  width: 25.8125em;
+  height: 100%;
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tile-upper > img {
+  height: 13.25em;
+  width: 25.8125em;
+  object-fit: cover;
+}
+
+.tile-lower {
+  display: inline-block;
+  width: 100%;
+}

@@ -1,0 +1,77 @@
+.tile-lower-right {
+  height: 7.9375em;
+  width: 50%;
+  float: right;
+}
+
+.chip-left {
+  height: 100%;
+  width: 50%;
+  float: left;
+}
+
+.chip-right {
+  height: 100%;
+  width: 50%;
+  float: right;
+}
+
+.chip {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.chip-bedrooms,
+.chip-bathrooms,
+.chip-grocery,
+.chip-park,
+.chip-pet,
+.chip-school {
+  padding-left: 0.3125em;
+  position: relative;
+}
+
+.chip-bedrooms {
+  margin-top: 0.625em;
+
+  &::before {
+    content: url(../../../public/images/Property-View/Bed.png);
+    position: absolute;
+    left: 3%;
+  }
+}
+
+.chip-bathrooms::before {
+  content: url(../../../public/images/Property-View/Sink.png);
+  position: absolute;
+  left: 3%;
+}
+
+.chip-pet::before {
+  content: url(../../../public/images/Property-View/AnimalShelter.png);
+  position: absolute;
+  left: 3%;
+}
+
+.chip-grocery {
+  margin-top: 0.625em;
+
+  &::before {
+    content: url(../../../public/images/Property-View/Ingredients.png);
+    position: absolute;
+    left: 3%;
+  }
+}
+
+.chip-park::before {
+  content: url(../../../public/images/Property-View/Forest.png);
+  position: absolute;
+  left: 3%;
+}
+
+.chip-school::before {
+  content: url(../../../public/images/Property-View/Classroom.png);
+  position: absolute;
+  left: 3%;
+}

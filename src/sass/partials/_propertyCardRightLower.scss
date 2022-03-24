@@ -13,7 +13,7 @@
   justify-content: space-between;
 }
 
-.tile {
+.property-card-tile {
   height: 100%;
   width: 30%;
   padding-left: 0.625em;
@@ -38,12 +38,14 @@
   top: -20%;
   left: -1%;
 }
+
 .bathrooms::before {
   content: url(../../../public/images/Property-View/Sink.png);
   position: absolute;
   top: -20%;
   left: -1%;
 }
+
 .facing::before {
   content: url(../../../public/images/Property-View/Summer.png);
   position: absolute;
