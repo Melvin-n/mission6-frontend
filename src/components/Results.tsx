@@ -1,28 +1,59 @@
-import React  from 'react'
+import React, {useEffect, useRef} from 'react'
 import RefineSearch from './RefineSearch'
 import '../styles/results.css'
 import PropertyDetails from './propertyDetailsType';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios'
+
 
 
 
 interface Props {
   searchResults: PropertyDetails[]
-  setSearchResults: ([]) => void
+  setSearchResults: (arg0: PropertyDetails[]) => void
+  setSelectedProperty: (arg0: string) => void
+  setProperty: (arg0: PropertyDetails) => void
+  selectedProperty: string
 
-}
-
-//take meter value and return formatted meters/kms
-const metersToKilometers = (meters: number): string => {
-  let distance: string;
-  if (meters > 999) {
-    distance = (meters/1000).toString() + 'km'
-  } else {
-    distance = meters.toString() + 'm'
-  }
-  return distance
 }
 
 const Results: React.FC<Props> = (props) => {
+
+  const navigate = useNavigate();
+  const isMounted = useRef(false)
+
+  //take meter value and return formatted meters/kms
+  const metersToKilometers = (meters: number): string => {
+    let distance: string;
+    if (meters > 999) {
+      distance = (meters/1000).toString() + 'km'
+    } else {
+      distance = meters.toString() + 'm'
+    }
+    return distance
+  }
+
+  //set chosen property and redirect to property view page
+useEffect(() => {
+  if (isMounted.current) {
+    axios.post('http://localhost:4000/api/selected-property', {
+      propertyAddress: props.selectedProperty
+    })
+    .then((res: any) => {
+      props.setProperty(res.data)
+      navigate('/view')
+    })
+    .catch((error: any) => {
+      console.error(error)
+    })
+  } else {
+    isMounted.current = true;
+  }
+    
+
+  }, [props.selectedProperty])
+
+
   return (
     <div id='results-section'>
         <RefineSearch  searchResults={props.searchResults} setSearchResults={props.setSearchResults}/>
@@ -30,7 +61,7 @@ const Results: React.FC<Props> = (props) => {
             <h2 id='display-results-title'>Results</h2>
             <div id='result-cards'>
             {props.searchResults.map((result: PropertyDetails, i: number) => (
-              <div key={i} className='property-result-card'>
+              <div key={i} className='property-result-card' onClick={() => props.setSelectedProperty(result.address)}>
                 <img className='property-card-image' src={result.image} alt='property' />
                 <div className='property-card-details'>
                   <div className='left-property-card'>

@@ -26,11 +26,17 @@ const PropertyCard = ({ Property }) => {
                 <Map address={Property.address} />
             </div>
             <div className='card-right'>
-                <div className="photos">
-                    <div className="photos-left"></div>
+            <div className="photos">
+                    <div className="photos-left">
+                        <img src={Property.image} alt={`${Property._id}`} />
+                    </div>
                     <div className="photos-right">
-                        <div className="photos-right-upper"></div>
-                        <div className="photos-right-lower"></div>
+                        <div className="photos-right-upper">
+                            <img src={Property.subimages[0]} alt={`${Property._id}`} />
+                        </div>
+                        <div className="photos-right-lower">
+                            <img src={Property.subimages[1]} alt={`${Property._id}`} />
+                        </div>
                     </div>
                 </div>
                 <div className="features">

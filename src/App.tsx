@@ -23,14 +23,17 @@ const App: React.FC = () => {
 
   const [searchValue, setSearchValue] = useState<string>('')
   const [searchResults, setSearchResults] = useState<PropertyDetails[]>([])
-  const [properties, setProperties] = useState([])
+  const [property, setProperty] = useState<PropertyDetails>()
   const [isLoading, setIsLoading] = useState(true)
   const [bookingConfirm, setBookingConfirm] = useState<BookingConfirmType>()
+  const [selectedProperty, setSelectedProperty] = useState<string>('42 Seacliffe Road, Hillsborough, 1042')
 
   useEffect(() => {
-    axios.get('http://mym6-alb-2138763550.us-east-2.elb.amazonaws.com/api/properties')
+    axios.post('http://localhost:4000/api/selected-property', {
+      propertyAddress: selectedProperty
+    })
     .then((res: any) => {
-      setProperties(res.data)
+      setProperty(res.data)
       setIsLoading(false)
     })
     .catch((error: any) => {
@@ -46,8 +49,8 @@ const App: React.FC = () => {
           <Route path='/' element={<SearchPage searchResults={searchResults} setSearchResults={setSearchResults} />} />
           <Route path="/booking" element={<Booking  setBookingConfirm={setBookingConfirm} />} />
           <Route path="/confirm" element={<Confirm bookingConfirm={bookingConfirm} />} />
-          { !isLoading ? <Route path="/view" element={<PropertyView Property={properties[0]} List={properties}/>} /> :null }
-          <Route path='/results' element={<SearchResults searchResults={searchResults} setSearchResults={setSearchResults}/>} />
+          <Route path="/view" element={<PropertyView selectedProperty={selectedProperty} setProperty={setProperty} Property={property} List={property}/>} /> 
+          <Route path='/results' element={<SearchResults setProperty={setProperty} selectedProperty={selectedProperty} setSelectedProperty={setSelectedProperty} searchResults={searchResults} setSearchResults={setSearchResults}/>} />
         </Routes>
       </BrowserRouter>
     </div>
