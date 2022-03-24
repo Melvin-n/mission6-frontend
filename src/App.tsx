@@ -12,7 +12,6 @@ import SearchResults from './pages/SearchResults';
 import PropertyView from './pages/PropertyView';
 import Booking from './pages/Booking';
 import PropertyDetails from './components/propertyDetailsType';
-import BookingConfirmType from './components/bookingConfirmType';
 import Confirm from './pages/Confirm.js';
 
 
@@ -25,15 +24,14 @@ const App: React.FC = () => {
   const [searchResults, setSearchResults] = useState<PropertyDetails[]>([])
   const [properties, setProperties] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  const [bookingConfirm, setBookingConfirm] = useState<BookingConfirmType>()
 
   useEffect(() => {
     axios.get('http://mym6-alb-2138763550.us-east-2.elb.amazonaws.com/api/properties')
-    .then((res: any) => {
+    .then(res => {
       setProperties(res.data)
       setIsLoading(false)
     })
-    .catch((error: any) => {
+    .catch((error) => {
       console.error(error)
     })
   }, []) 
@@ -44,8 +42,8 @@ const App: React.FC = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<SearchPage searchResults={searchResults} setSearchResults={setSearchResults} />} />
-          <Route path="/booking" element={<Booking  setBookingConfirm={setBookingConfirm} />} />
-          <Route path="/confirm" element={<Confirm bookingConfirm={bookingConfirm} />} />
+          <Route path="/booking" element={<Booking />} />
+          <Route path="/confirm" element={<Confirm />} />
           { !isLoading ? <Route path="/view" element={<PropertyView Property={properties[0]} List={properties}/>} /> :null }
           <Route path='/results' element={<SearchResults searchResults={searchResults} setSearchResults={setSearchResults}/>} />
         </Routes>

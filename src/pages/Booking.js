@@ -71,13 +71,7 @@ const Booking = (props) => {
     })
   }
 
-  //  try {
-  //     const response = await axios.post(baseURL, newUser);
-  //     console.log(response.data);
-  //  } catch (err) {
-  //     console.log(err);
-  //  }
-  
+
 
   return (
     <>
