@@ -59,6 +59,25 @@ const HomeSearch: React.FC<Props> = (props) => {
     return query
   }
 
+  //quickSort function
+  const quickSort = (properties: PropertyDetails[]):PropertyDetails[] => {
+    if (properties == null) return []
+    if (properties.length < 2) return properties
+
+    let pivot: PropertyDetails = properties[0], left: PropertyDetails[] = [], right: PropertyDetails[] = []      
+
+    for (let i: number = 1; i < properties.length; i ++) {
+        if (properties[i].address < pivot.address) {
+            left.push(properties[i])
+            continue
+        }
+
+        right.push(properties[i])
+    }
+
+    return [...quickSort(left), pivot, ...quickSort(right)]
+  }
+
   const querySearch = (): void => {
     fetch('http://mym6-alb-2138763550.us-east-2.elb.amazonaws.com/api/properties/query', {
       method: 'POST',
@@ -72,7 +91,7 @@ const HomeSearch: React.FC<Props> = (props) => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data)
-      props.setSearchResults(data) 
+      props.setSearchResults(quickSort(data)) 
       navigate('/results')  
     })
   }
