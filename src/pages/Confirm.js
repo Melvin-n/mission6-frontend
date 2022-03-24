@@ -20,6 +20,16 @@ const Confirm = (props) => {
 
   const navigate = useNavigate();
 
+// Want to use async/await? Add the `async` keyword to your outer function/method.
+async function getUser() {
+  try {
+    const response = await axios.get('/user?ID=12345');
+    console.log(response);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
   return (
     <>
       <Header />
@@ -106,9 +116,10 @@ const Confirm = (props) => {
                   <Button 
                     className="ms-5 mt-0" 
                     variant="danger" 
-                    size="lg">
+                    size="lg"
+                    onClick={() => navigate('/results')}>
                      View more properties
-                     onClick={navigate('/results')}
+                     
                   </Button>
                  </Col>
                </Row>
