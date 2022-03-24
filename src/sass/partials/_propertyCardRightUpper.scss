@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+
+.photos {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2.5em;
+  margin-bottom: 1.875em;
+  height: 18.4375em;
+  width: 100%;
+}
+
+.photos-left {
+  background: url(../../../public/images/houses/house1.png);
+  background-size: cover;
+  height: 100%;
+  width: 320px;
+  float: left;
+}
+.photos-right {
+  float: right;
+  height: 100%;
+  width: 233px;
+}
+
+.photos-right-upper {
+  background: url(../../../public/images/houses/interior1.png);
+  background-size: cover;
+  height: 49%;
+  width: 100%;
+  margin-bottom: 2%;
+}
+.photos-right-lower {
+  background: url(../../../public/images/houses/interior3.jpg);
+  background-size: cover;
+  height: 49%;
+  width: 100%;
+}

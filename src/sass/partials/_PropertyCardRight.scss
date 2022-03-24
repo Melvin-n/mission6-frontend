@@ -1,0 +1,10 @@
+@use "../abstracts" as *;
+@use "./propertyCardRightUpper";
+@use "./propertyCardRightLower";
+
+.card-right {
+  float: right;
+  width: 35em;
+  height: 100%;
+  margin-right: 3.5%;
+}
